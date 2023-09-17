@@ -10,7 +10,6 @@ const ElementOne = () => {
         style={styles.image}
       />
       <Text style={styles.price}>5€/H</Text>
-      <Text style={styles.descriptionLabel}>Description:</Text>
       <Text style={styles.descriptionText}>
         Profitez d'une ambiance stimulante et d'une journée productive dans notre coffee-shop coworking.
       </Text>
@@ -31,11 +30,10 @@ const ElementTwo = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Nos Salons privés</Text>
       <Image
-          source={require('./place-individuels.jpg')}
+          source={require('./Rio.jpg')}
         style={styles.image}
       />
       <Text style={styles.price}>12€/H</Text>
-      <Text style={styles.descriptionLabel}>Description:</Text>
       <Text style={styles.descriptionText}>
       Nos salons privés chez Gusto Coffee, l'endroit idéal pour travailler en toute tranquillité.
 Profitez d'un espace exclusif et confortable pour vos réunions ou votre travail individuel.
@@ -100,6 +98,7 @@ const styles = StyleSheet.create({
   },
   image: {
     marginBottom: 10,
+    borderRadius:20,
   },
   price: {
     fontSize: 20,
@@ -115,21 +114,28 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonContainer: {
-    flexDirection: 'row', // This makes the buttons appear in a row
-    justifyContent: 'space-between', // This evenly spaces the buttons
-    marginHorizontal: 20, // You can adjust this margin as needed
+    flexDirection: 'column', // Utilisez 'column' pour empiler les boutons verticalement
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+    marginBottom: 70, // Ajoute de l'espace en dessous du dernier bouton
   },
   button: {
     backgroundColor: '#836349FF',
     borderRadius: 25,
     paddingVertical: 10,
     paddingHorizontal: 20,
+    alignItems: 'center',
+    marginVertical: 5, // Ajoutez de l'espace vertical entre les boutons
   },
   buttonText: {
     color: '#ffffff',
     fontSize: 18,
     fontWeight: 'bold',
   },
+  
+  
+  
 });
 
 export default App;
